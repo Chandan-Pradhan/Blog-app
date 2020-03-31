@@ -6,16 +6,23 @@
     <title>Django Blog</title>
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
+<div class="container">
+    <header>
+        <div class="nav-left">
+                <h1><a href="{% url 'home' %}">CodeDaddy's Blog</a></h1>
+        </div>
 
-<header>
-    <h1><a href="{% url 'home' %}">CodeDaddy's Blog</a></h1>
-</header>
+        <div class="nav-right">
+            <a href="{% url 'post_new' %}">+ New Blog Post</a>
+        </div>
+    </header>
 
-{% block content %}
+    {% block content %}
 
-{% endblock content %}
-
+    {% endblock content %}
+</div>
 </body>
 </html>
